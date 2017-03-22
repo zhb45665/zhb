@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>UserInfo</title>
+</head>
+<body>
+<form action="/create/" method="post">
+	ID: <input type="text" name = 'id'/>
+	UserName: <input type="text" name = 'username'/>
+	sex:<select>
+			<option value="man">男</option>
+			<option value="woman">女</option>
+		</select>
+		<br/><hr/>
+	info：<textarea rows="5" cols="15"></textarea>
+	<input type="submit">
+</form>
+	{% for post in posts %}
+	<h2>{{ post.id }}</h2>
+	<h2>{{ post.username }}</h2>
+	<h2>{{ post.sex }}</h2>
+	<h2>{{ post.info }}</h2>
+	<h2>{{ post.timestamp }}</h2>
+	{% endfor %}
+</body>
+</html>
